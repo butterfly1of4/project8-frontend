@@ -5,6 +5,8 @@ import logo from "../src/logo.png";
 import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import newReleases from "./components/newReleases";
+import expiring from "./components/expiring";
+import Modal from "./components/Modal";
 
 
 let url = "https://project8-backend.herokuapp.com/";
@@ -37,7 +39,7 @@ const optionGET = {
     },
   };
 
-  
+
 class App extends Component {
     constructor() {
         super();
@@ -56,11 +58,27 @@ class App extends Component {
                 </nav>
                 <main>
                     <Route path="/newReleases" exact component={newReleases}/>
+                    <Route path="/newReleases/" component={Modal}/>
 
                 </main>
             </div>
         )
     }//render
+    componentDidMount() {
+        //fetch request to the API
+        fetch(url, optionGET, optionDELETE)
+          //converting the API to readable code. Naming it convertedResponse
+          .then((res) => res.json())
+          .then((convertedResponse) => {
+            //console.log to see if it works
+            console.log(convertedResponse);
+            console.log(convertedResponse[0].title);
+            // setting State to fetch a new cocktail name each time the page is loaded. It was empty when defined earlier.
+            this.setState({
+              name: convertedResponse[0].title,
+            });
+          });
+      }
 }//component
 
 export default App;
