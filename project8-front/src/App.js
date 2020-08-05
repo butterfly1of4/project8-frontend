@@ -58,7 +58,9 @@ class App extends Component {
                 </nav>
                 <main>
                     <Route path="/newReleases" exact component={newReleases}/>
-                    <Route path="/newReleases/" component={Modal}/>
+                   <Route path="/newReleases/update/:title" render={(routerProps) => (
+            <Update {...routerProps}></Update>
+          )} />
 
                 </main>
             </div>
