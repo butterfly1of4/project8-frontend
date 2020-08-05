@@ -28,7 +28,16 @@ const optionGET = {
         return (
         <div>
 
-
+        <Link to={"/drinks/update/" + item.strDrink}>
+                    <button
+                      className='update'
+                      onClick={(e) => {
+                        this.update(item);
+                      }}
+                    >
+                      UPDATE
+                    </button>{" "}
+                  </Link>
         </div>
 
         )//return
