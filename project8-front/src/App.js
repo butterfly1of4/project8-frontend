@@ -1,5 +1,7 @@
+
 import React, { Component }from "react";
 import logo from "../src/logo.png";
+
 import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import newReleases from "./components/newReleases";
