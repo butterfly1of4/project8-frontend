@@ -6,6 +6,7 @@ import "./App.css";
 import newReleases from "./components/newReleases";
 import expiring from "./components/expiring";
 import Modal from "./components/Modal";
+import Update from "./components/update";
 
 let url = "https://project8-backend.herokuapp.com/";
 
@@ -53,6 +54,7 @@ class App extends Component {
         </nav>
         <main>
           <Route path="/newReleases" exact component={newReleases} />
+          <Route path="/expiring" exact component={expiring} />
           <Route
             path="/newReleases/update/:title"
             render={(routerProps) => <Update {...routerProps}></Update>}
