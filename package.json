@@ -1,0 +1,28 @@
+{
+  "name": "project8-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/butterfly1of4/project8-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/butterfly1of4/project8-frontend/issues"
+  },
+  "homepage": "https://github.com/butterfly1of4/project8-frontend#readme",
+  "dependencies": {
+    "create-react-app": "^3.4.1",
+    "react": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^1.1.1"
+  },
+  "devDependencies": {}
+}
