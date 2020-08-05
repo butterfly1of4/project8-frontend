@@ -6,6 +6,10 @@ function onClick() {
   alert("you clicked me");
 }
 
-storiesOf("Button", module).add("Search", () => (
-  <Button type="search" whenClicked={onClick} label="Search" />
-));
+storiesOf("Button", module)
+  .add("Search", () => (
+    <Button type="search" whenClicked={onClick} label="Search" />
+  ))
+  .add("Update", () => (
+    <Button type="button" whenClicked={onClick} label="Update" />
+  ));
