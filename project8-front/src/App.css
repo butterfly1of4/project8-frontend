@@ -7,3 +7,16 @@ nav {
 .logo {
   margin: -60px 70px 70px 60px;
 }
+
+.list {
+  /* margin: 0px 80px; */
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container {
+  max-width: 100px !important;
+  /* margin: 20px 60px 0px 60px; */
+  padding: 40px 100px;
+  font-weight: bold;
+}
