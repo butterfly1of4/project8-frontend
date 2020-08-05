@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import App from "../App";
 import { render } from "react-dom";
+import { Route, Link} from "react-router-dom";
 
 let url = "https://project8-backend.herokuapp.com/";
 
@@ -24,26 +25,25 @@ const optionGET = {
       }; //state
     } //constructor
 
-    render () {
+    render() {
         return (
-        <div>
-
-        <Link to={"/drinks/update/" + item.strDrink}>
-                    <button
-                      className='update'
-                      onClick={(e) => {
-                        this.update(item);
-                      }}
-                    >
-                      UPDATE
-                    </button>{" "}
-                  </Link>
+        
+        <div className="box">   
+        <div className="information"></div>
+        <button
+          className="close"
+          onClick={(e) => {
+            document.querySelector(".box").style.opacity = 0;
+          }}
+        >
+          X
+        </button>
+                  
         </div>
 
         )//return
     }//render
+}//component    
 
-
-}//component
 
 export default Modal;
