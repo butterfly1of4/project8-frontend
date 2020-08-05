@@ -1,9 +1,42 @@
 nav {
-  height: 85px;
-  /* margin-top: 50px; */
+  height: 100px;
+  margin-bottom: 30px;
   background-color: black;
+  position: fixed;
+  width: 100%;
 }
 
 .logo {
-  margin: -60px 70px 70px 60px;
+  margin: -250px 70px 70px 60px;
+  position: fixed;
+  height: 300px;
+  width: 29%;
+}
+
+.list {
+  padding-top: 10%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container {
+  max-width: 100px !important;
+  /* margin: 20px 60px 0px 60px; */
+  padding: 40px 100px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 15px;
+  color: black;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  margin-left: -20px;
+  /* padding-bottom: 15%; */
+}
+
+img {
+  height: 300px;
+  padding-top: 15%;
 }
