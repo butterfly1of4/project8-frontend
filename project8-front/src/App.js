@@ -47,10 +47,7 @@ class App extends Component {
     return (
       <div>
         <nav>
-          <img src={logo} />
-          <h1>Add search bar</h1>
-          <h1>Add button links to Expiring</h1>
-          <h1>Add button links to New Releases</h1>
+          <img className="logo" src={logo} />
         </nav>
         <main>
           <Route path="/newReleases" exact component={newReleases} />
