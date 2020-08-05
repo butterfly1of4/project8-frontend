@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import logo from "./logo.svg";
 import { Route, Link, Switch } from "react-router-dom";
-import Modal from ('.../components/Modal.js')
 import "./App.css";
 
 let url = "https://project8-backend.herokuapp.com/";
