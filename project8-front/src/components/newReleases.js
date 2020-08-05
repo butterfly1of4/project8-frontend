@@ -4,19 +4,98 @@ import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
 //import the API
-
+let url = "https://project8-backend.herokuapp.com/";
 
 //add CRUD paths if necessary
-
+const optionGET = {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  };
 
 class newReleases extends Component {
     constructor() {
         super();
         this.state = {
-
+        netflixid: String,
+        title: String,
+        image: String,
+        synopsis: String,
+        released: String,
+        unogsdate: String
         }//state
     }//constructor
-}//component
+
+    componentWillMount() {
+        fetch(url, optionGET)
+          //converting the API to readable code. Naming it convertedResponse
+          .then((res) => res.json())
+          .then((data) => this.setState({ data }))
+          .catch((err) => {
+            console.log(err);
+          });
+      } //componentWillMount
+      render() {
+        let list = this.state.data.map((item) => {
+          return (
+            <div className="container">
+              <>
+                <div className="title" key={item}>
+                  {item.title}
+                </div>
+                <img src={item.image} />
+                <div className="button-class">
+                  <button
+                    className="information"
+                    onClick={(e) => {
+                      this.showModal(item.synopsis);
+                    }}
+                  >
+                    INFORMATION
+                  </button>{" "}
+                </div>
+              </>
+            </div>
+          ); //return
+        }); //map
+        return (
+          <React.Fragment>
+            <Modal />
+            <div className="list">{list}</div>
+          </React.Fragment>
+        );
+      } //render
+    
+      showModal = (e) => {
+        console.dir(e);
+        let info = this.state.data.synopsis;
+        document.querySelector(".title").innerHTML = e;
+        document.querySelector(".box").style.opacity = 1;
+        document.querySelector(".close").style.opacity = 1;
+        this.setState({ clicked: !this.state.clicked });
+      }; //showModal
+    
+    //   remove(title) {
+    //     fetch(url + "/" + title, optionDELETE)
+    //       .then(() => {
+    //         console.log("removed");
+    //         this.setState({
+    //           data: this.state.data.filter((item) => {
+    //             return item.title !== title;
+    //           }),
+    //         });
+    //       })
+    //       .catch((err) => {
+    //         console.log(err);
+    //       });
+    //   } //remove
+    
+    //   update(item) {
+    //     console.log("update works");
+    //   }
+    } //component
+
 
 
 
