@@ -1,11 +1,20 @@
 import React, { Component } from "react";
-import App from "../App";
+// import App from "../App";
+import App from '../App.css'
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
-import Button from "./Button/Button"
-
+import Button from "./StoryBook/Button/Button";
+import Info from "./StoryBook/Icons/info.png";
+import Trash from "./StoryBook/Icons/trash.png";
+import Icon from './StoryBook/Icons/Icon.css'
 //import the API
 let url = "https://project8-backend.herokuapp.com/expire";
+
+let style = {
+  width: 30,
+  height: 30
+}
+
 
 //CRUD paths
 const optionGET = {
@@ -51,21 +60,24 @@ class Expiring extends Component {
             </div>
             <img src={item.image} />
             <div className="button-class">
+              
               <button
-                className="delete"
+                className="delete" 
                 onClick={(e) => {
                   this.remove(item.title);
                 }}
               >
-                DELETE
+                
+                <img style={style} className="Trash" src={Trash}/>
               </button>{" "}
-              <button
-                className="information"
+              <button 
+                className="information"  
                 onClick={(e) => {
                   this.showModal(item.synopsis);
                 }}
               >
-                INFORMATION
+             
+                <img style={style} className="Info" src={Info} />
               </button>{" "}
             </div>
           </>

@@ -1,16 +1,17 @@
 nav {
-  height: 115px;
-  margin-bottom: 30px;
+  height: 125px;
+  /* margin-bottom: 30px; */
   background-color: black;
   position: fixed;
   width: 100%;
+  z-index: 4;
 }
 
 .logo {
-  margin: -260px 70px 70px 60px;
+  padding: 20px;
   position: fixed;
-  height: 300px;
-  width: 29%;
+  height: 90px;
+  width: 20%;
 }
 
 .list {
@@ -21,7 +22,6 @@ nav {
 
 .container {
   max-width: 100px !important;
-  /* margin: 20px 60px 0px 60px; */
   padding: 40px 100px;
   font-weight: bold;
 }
@@ -33,17 +33,114 @@ nav {
   text-align: center;
   width: 250px;
   margin-left: -20px;
-  /* padding-bottom: 15%; */
 }
 
 img {
   height: 300px;
   padding-top: 17%;
+
 }
 
 .curtain {
-  height: 750px;
+  height: 650px;
   width: 100%;
-  margin-top: -65px;
-  position: fixed;
+  margin-top: -30px;
+}
+
+.pageLinkButton {
+  background-color: red;
+  color: white;
+  border: 2px red solid;
+  font-size: 20px;
+  animation: bouncy 5s infinite linear;
+  float: right;
+  /* position: fixed; */
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px 0 rgba(247, 243, 243, 0.8), 10px 5px 15px 0;
+  margin: 50px 70px 50px 20px;
+}
+
+.pageLinkButton:hover {
+  background-color: white;
+  color: red;
+}
+
+
+
+.HPLinkButtonE {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  margin: 20px 0;
+  background: red;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  font-size: 30px;
+  top: 33%;
+  left: 28%;
+  z-index: 1;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0; 
+}
+
+.HPLinkButtonNR {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  margin: 20px 0;
+  background: red;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  font-size: 30px;
+  top: 33%;
+  right: 28%;
+  z-index: 4;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0; 
+}
+.box {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  background-color: black;
+
+}
+
+.delete {
+  background-color: black;
+  width: 100px;
+  border: black solid;
+padding-bottom: 10px;
+}
+
+.Trash {
+  width: 50px;
+}
+
+.information {
+  background-color: black;
+  width: 100px;
+  border: black solid;
+  padding-bottom: 10px;
+}
+
+.Info {
+  width: 50px;
+}
+.NRInfo {
+padding-left: 85px;
+}
+
+.button-class {
+  display: flex;
+  width: 210px;
+  border: black solid 1px;
+  justify-content: space-between;
+  background-color: black;
+  height: 50px;
 }
