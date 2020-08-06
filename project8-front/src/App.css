@@ -1,6 +1,6 @@
 nav {
   height: 115px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   background-color: black;
   position: fixed;
   width: 100%;
@@ -40,10 +40,10 @@ img {
 }
 
 .curtain {
-  height: 750px;
+  height: 700px;
   width: 100%;
-  margin-top: -65px;
-  position: fixed;
+  margin-top: 0px;
+  /* position: fixed; */
 }
 
 .pageLinkButton {
