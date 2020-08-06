@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
+import Button from "./Button/Button"
 
 //import the API
 let url = "https://project8-backend.herokuapp.com/expire";
