@@ -40,3 +40,10 @@ img {
   height: 300px;
   padding-top: 15%;
 }
+
+.curtain {
+  height: 750px;
+  width: 100%;
+  margin-top: -65px;
+  position: fixed;
+}
