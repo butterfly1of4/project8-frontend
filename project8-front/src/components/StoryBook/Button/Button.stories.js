@@ -11,5 +11,5 @@ storiesOf("Button", module)
     <Button type="search" whenClicked={onClick} label="Search" />
   ))
   .add("Update", () => (
-    <Button type="button" whenClicked={onClick} label="Update" />
+    <Button type="update" whenClicked={onClick} label="Update" />
   ));

@@ -7,7 +7,7 @@ import newReleases from "./components/newReleases";
 import expiring from "./components/expiring";
 import Modal from "./components/Modal";
 import Update from "./components/update";
-import Button from "./components/Button/Button";
+import Button from "./components/StoryBook/Button/Button";
 
 let url = "https://project8-backend.herokuapp.com/";
 
@@ -61,7 +61,7 @@ class App extends Component {
               render={(routerProps) => <Update {...routerProps}></Update>}
             />
           </Switch>
-          <img className="curtain" src={backgroundimage}/>
+          <img className="curtain" src={backgroundimage} />
           <Button />
         </main>
       </div>
