@@ -10,3 +10,5 @@ const Forms = (props) => {
     classList += `form-${props.type}`;
   }
 };
+
+export default Forms;
