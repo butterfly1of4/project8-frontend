@@ -51,17 +51,23 @@ class App extends Component {
           <Link to="/">
             <img className="logo" src={logo} />
           </Link>
+          <Link to="/expiring">
+            <button className="pageLinkButton">Expiring</button>
+          </Link>
+          <Link to="/newReleases">
+            <button className="pageLinkButton">New Releases</button>
+          </Link>
         </nav>
         <main>
           <Switch>
-            <Route path="/newReleases" exact component={newReleases} />
-            <Route path="/expiring" exact component={expiring} />
+            <Route path="/newReleases" component={newReleases} />
+            <Route path="/expiring" component={expiring} />
             <Route
               path="/newReleases/update/:title"
               render={(routerProps) => <Update {...routerProps}></Update>}
             />
           </Switch>
-          <img className="curtain" src={backgroundimage}/>
+          <img className="curtain" src={backgroundimage} />
           <Button />
         </main>
       </div>
