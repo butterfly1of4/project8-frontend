@@ -8,7 +8,7 @@ import expiring from "./components/expiring";
 import Modal from "./components/Modal";
 import Update from "./components/update";
 
-import Button from "./components/Button/Button";
+// import Button from "./components/Button/Button";
 import Nav from "./components/Nav";
 import Home from "./Home";
 
@@ -53,7 +53,9 @@ class App extends Component {
         <Nav />
         <div>
           <Switch>
-            <Route path="/" exact />
+            <Route path="/" exact>
+              <Home />
+            </Route>
             <Route path="/newReleases" exact component={newReleases} />
             <Route path="/expiring" exact component={expiring} />
             <Route
@@ -61,10 +63,7 @@ class App extends Component {
               render={(routerProps) => <Update {...routerProps}></Update>}
             />
           </Switch>
-
         </div>
-        <Home />
-
       </div>
     );
   } //render

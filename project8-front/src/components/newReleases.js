@@ -3,8 +3,7 @@ import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
-import Button from "./Button/Button";
-
+// import Button from "./Button/Button";
 
 //import the API
 let url = "https://project8-backend.herokuapp.com/release";
@@ -58,7 +57,7 @@ class newReleases extends Component {
     }); //map
     return (
       <React.Fragment>
-        {/* <Modal /> */}
+        <Modal />
         <div className="list">{list}</div>
       </React.Fragment>
     );
@@ -67,9 +66,9 @@ class newReleases extends Component {
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
-    // document.querySelector(".title").innerHTML = e;
-    // document.querySelector(".box").style.opacity = 1;
-    // document.querySelector(".close").style.opacity = 1;
+    document.querySelector(".title").innerHTML = e;
+    document.querySelector(".box").style.opacity = 1;
+    document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
 
