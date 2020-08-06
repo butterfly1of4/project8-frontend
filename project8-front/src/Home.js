@@ -7,6 +7,7 @@ import "./App.css";
 class Home extends Component {
   render() {
     return (
+
       <>
         <img className="curtain" src={backgroundimage} />
         <Switch>
@@ -20,6 +21,7 @@ class Home extends Component {
           </Link>
         </Switch>
       </>
+
     );
   }
 }
