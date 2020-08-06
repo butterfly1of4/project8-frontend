@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
+
+import Button from "./Button/Button";
+
+
 //import the API
 import Info from "./StoryBook/Icons/info.png"
 
@@ -13,6 +17,7 @@ const optionGET = {
     Accept: "application/json",
   },
 };
+
 class newReleases extends Component {
   constructor() {
     super();
@@ -20,6 +25,7 @@ class newReleases extends Component {
       data: [],
     }; //state
   } //constructor
+
   componentWillMount() {
     fetch(url, optionGET)
       //converting the API to readable code. Naming it convertedResponse
@@ -60,6 +66,7 @@ class newReleases extends Component {
       </React.Fragment>
     );
   } //render
+
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
@@ -68,6 +75,7 @@ class newReleases extends Component {
     // document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
+
   //   remove(title) {
   //     fetch(url + "/" + title, optionDELETE)
   //       .then(() => {
@@ -82,6 +90,7 @@ class newReleases extends Component {
   //         console.log(err);
   //       });
   //   } //remove
+
   //   update(item) {
   //     console.log("update works");
   //   }

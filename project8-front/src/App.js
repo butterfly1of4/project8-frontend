@@ -7,7 +7,10 @@ import newReleases from "./components/newReleases";
 import expiring from "./components/expiring";
 import Modal from "./components/Modal";
 import Update from "./components/update";
-import Button from "./components/StoryBook/Button/Button";
+
+import Button from "./components/Button/Button";
+import Nav from "./components/Nav";
+import Home from "./Home";
 
 let url = "https://project8-backend.herokuapp.com/";
 
@@ -47,13 +50,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <Link to="/">
-            <img className="logo" src={logo} />
-          </Link>
-        </nav>
-        <main>
+        <Nav />
+        <div>
           <Switch>
+            <Route path="/" exact />
             <Route path="/newReleases" exact component={newReleases} />
             <Route path="/expiring" exact component={expiring} />
             <Route
@@ -61,9 +61,10 @@ class App extends Component {
               render={(routerProps) => <Update {...routerProps}></Update>}
             />
           </Switch>
-          <img className="curtain" src={backgroundimage} />
-          <Button />
-        </main>
+
+        </div>
+        <Home />
+
       </div>
     );
   } //render
@@ -76,7 +77,7 @@ class App extends Component {
         //console.log to see if it works
         console.log(convertedResponse);
         console.log(convertedResponse[0].title);
-        // setting State to fetch a new cocktail name each time the page is loaded. It was empty when defined earlier.
+        // setting State to fetch a new title name each time the page is loaded. It was empty when defined earlier.
         this.setState({
           name: convertedResponse[0].title,
         });
