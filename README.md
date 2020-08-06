@@ -31,11 +31,6 @@ TBD
     * CORS
     * Body-parser
     * React
-<<<<<<< HEAD
-    *Semantic
+   
     
-=======
-    * Semantic
-
->>>>>>> 62623f85e2c72dec9830162de3713fe7092843c8
 # Issues
