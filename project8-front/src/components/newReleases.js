@@ -3,6 +3,8 @@ import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 //import the API
+import Info from "./StoryBook/Icons/info.png"
+
 let url = "https://project8-backend.herokuapp.com/release";
 //add CRUD paths if necessary
 const optionGET = {
@@ -44,6 +46,7 @@ class newReleases extends Component {
                 }}
               >
                 INFORMATION
+                < img className="Info" src={"Info"}/>
               </button>{" "}
             </div>
           </>
@@ -83,4 +86,5 @@ class newReleases extends Component {
   //     console.log("update works");
   //   }
 } //component
+
 export default newReleases;
