@@ -4,7 +4,7 @@ import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
 //import the API
-let url = "https://project8-backend.herokuapp.com/";
+let url = "https://project8-backend.herokuapp.com/expire";
 
 //CRUD paths
 const optionGET = {
