@@ -54,7 +54,11 @@ class App extends Component {
         <div>
           <Switch>
             <Route path="/" exact>
+<<<<<<< HEAD
             <Home />
+=======
+              <Home />
+>>>>>>> a0f9df4072c33a860833a696bd7ddbd18aead4bf
             </Route>
             <Route path="/newReleases" exact component={newReleases} />
             <Route path="/expiring" exact component={expiring} />
@@ -63,9 +67,11 @@ class App extends Component {
               render={(routerProps) => <Update {...routerProps}></Update>}
             />
           </Switch>
-
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0f9df4072c33a860833a696bd7ddbd18aead4bf
       </div>
     );
   } //render

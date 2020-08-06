@@ -4,6 +4,7 @@ import backgroundimage from "./images/backgroundimage.jpg";
 import "./App.css";
 
 class Home extends Component {
+<<<<<<< HEAD
     render () {
         return(
             
@@ -11,6 +12,14 @@ class Home extends Component {
             <img className="curtain" src={backgroundimage} />
         )
     }
+=======
+  render() {
+    return (
+      //    <div></div>
+      <img className="curtain" src={backgroundimage} />
+    );
+  }
+>>>>>>> a0f9df4072c33a860833a696bd7ddbd18aead4bf
 }
 
 export default Home;
