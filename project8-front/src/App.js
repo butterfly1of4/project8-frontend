@@ -7,6 +7,7 @@ import newReleases from "./components/newReleases";
 import expiring from "./components/expiring";
 import Modal from "./components/Modal";
 import Update from "./components/update";
+
 import Button from "./components/Button/Button";
 import Nav from "./components/Nav";
 import Home from "./Home";
@@ -60,8 +61,10 @@ class App extends Component {
               render={(routerProps) => <Update {...routerProps}></Update>}
             />
           </Switch>
+
         </div>
         <Home />
+
       </div>
     );
   } //render
