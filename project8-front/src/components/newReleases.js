@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 // import Button from "./Button/Button";
 
-
 //import the API
 let url = "https://project8-backend.herokuapp.com/release";
 //add CRUD paths if necessary
