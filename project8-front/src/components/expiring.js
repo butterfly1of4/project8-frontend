@@ -5,16 +5,24 @@ import { Link } from "react-router-dom";
 import Button from "./StoryBook/Button/Button";
 import Info from "./StoryBook/Icons/info.png";
 import Trash from "./StoryBook/Icons/trash.png";
-import Icon from "./StoryBook/Icons/Icon.css";
+import Icon from './StoryBook/Icons/Icon.css'
 //import the API
 let url = "https://project8-backend.herokuapp.com/expire";
 
 let style = {
-  width: 25,
-  height: 25
-  
+  width: 30,
+  height: 30
 }
 
+let buttonStyle = {
+  // backgroundColor: black,
+  // color: white,
+  // display: flex,
+  // width: 200,
+  // alignItems: center,
+  // height: 40,
+  // justifyContent: space-between
+}
 //CRUD paths
 const optionGET = {
   method: "GET",
@@ -60,22 +68,22 @@ class Expiring extends Component {
             <img src={item.image} />
             <div className="button-class">
               <button
-                className="delete"
+                className="delete" style={buttonStyle} 
                 onClick={(e) => {
                   this.remove(item.title);
                 }}
               >
                 DELETE
-                {/* <img style={style} className="Trash" src={"Trash"}/> */}
+                <img style={style} className="Trash" src={Trash}/>
               </button>{" "}
               <button 
-                className="information" 
+                className="information" style={buttonStyle} 
                 onClick={(e) => {
                   this.showModal(item.synopsis);
                 }}
               >
                 INFORMATION
-                {/* <img style={style} className="Info" src={"Info"} /> */}
+                <img style={style} className="Info" src={Info} />
               </button>{" "}
             </div>
           </>

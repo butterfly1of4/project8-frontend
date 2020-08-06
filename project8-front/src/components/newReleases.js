@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
+import Info from "./StoryBook/Icons/info.png"
 
 // import Button from "./Button/Button";
 
 //import the API
-import Info from "./StoryBook/Icons/info.png"
 
 let style = {
   width: 25,
