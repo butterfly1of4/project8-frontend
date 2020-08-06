@@ -1,5 +1,5 @@
 nav {
-  height: 115px;
+  height: 125px;
   /* margin-bottom: 30px; */
   background-color: black;
   position: fixed;
@@ -7,10 +7,10 @@ nav {
 }
 
 .logo {
-  margin: -260px 70px 70px 60px;
+  padding: 20px;
   position: fixed;
-  height: 300px;
-  width: 29%;
+  height: 90px;
+  width: 20%;
 }
 
 .list {
@@ -40,10 +40,9 @@ img {
 }
 
 .curtain {
-  height: 700px;
+  height: 650px;
   width: 100%;
-  margin-top: 0px;
-  /* position: fixed; */
+  margin-top: -30px;
 }
 
 .pageLinkButton {
@@ -63,4 +62,18 @@ img {
 .pageLinkButton:hover {
   background-color: white;
   color: red;
+}
+
+.HPLinkButton {
+  background-color: red;
+  color: white;
+  border: 2px dashed red;
+  padding: 15px;
+  border-radius: 8px 40px;
+  font-size: 30px;
+  z-index: 1;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0;
 }
