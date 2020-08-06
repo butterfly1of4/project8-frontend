@@ -4,10 +4,6 @@ import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
 // import Button from "./Button/Button";
-<<<<<<< HEAD
-
-=======
->>>>>>> a0f9df4072c33a860833a696bd7ddbd18aead4bf
 
 //import the API
 import Info from "./StoryBook/Icons/info.png"
