@@ -7,7 +7,7 @@ class Home extends Component {
     render () {
         return(
             
-        //    <div></div>
+        //    <div>console.log('here pics go')</div>
             <img className="curtain" src={backgroundimage} />
         )
     }

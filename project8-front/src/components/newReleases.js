@@ -3,7 +3,7 @@ import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
-import Button from "./Button/Button";
+// import Button from "./Button/Button";
 
 
 //import the API
@@ -35,6 +35,8 @@ class newReleases extends Component {
         console.log(err);
       });
   } //componentWillMount
+
+ 
   render() {
     let list = this.state.data.map((item) => {
       return (
@@ -49,9 +51,11 @@ class newReleases extends Component {
                 className="information"
                 onClick={(e) => {
                   this.showModal(item.synopsis);
+                  
                 }}
               >
                 INFORMATION
+                
                 < img className="Info" src={"Info"}/>
               </button>{" "}
             </div>
@@ -61,7 +65,7 @@ class newReleases extends Component {
     }); //map
     return (
       <React.Fragment>
-        {/* <Modal /> */}
+        <Modal />
         <div className="list">{list}</div>
       </React.Fragment>
     );
@@ -70,9 +74,9 @@ class newReleases extends Component {
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
-    // document.querySelector(".title").innerHTML = e;
-    // document.querySelector(".box").style.opacity = 1;
-    // document.querySelector(".close").style.opacity = 1;
+    document.querySelector(".title").innerHTML = e;
+    document.querySelector(".box").style.opacity = 1;
+    document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
 
