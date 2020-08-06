@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
-import Button from "./Button/Button";
-
-
->>>>>>> 5da94ad8c2cddea5c567253646cc42aab4ae394f
 //import the API
 let url = "https://project8-backend.herokuapp.com/release";
 //add CRUD paths if necessary
