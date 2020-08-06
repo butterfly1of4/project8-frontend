@@ -8,6 +8,12 @@ import { Link } from "react-router-dom";
 //import the API
 import Info from "./StoryBook/Icons/info.png"
 
+let style = {
+  width: 25,
+  height: 25
+  
+}
+
 let url = "https://project8-backend.herokuapp.com/release";
 //add CRUD paths if necessary
 const optionGET = {
@@ -53,9 +59,7 @@ class newReleases extends Component {
                   
                 }}
               >
-                INFORMATION
-                
-                < img className="Info" src={"Info"}/>
+                INFORMATION< img style={style} className="Info" src={Info}/>
               </button>{" "}
             </div>
           </>

@@ -9,6 +9,11 @@ import Icon from "./StoryBook/Icons/Icon.css";
 //import the API
 let url = "https://project8-backend.herokuapp.com/expire";
 
+let style = {
+  width: 25,
+  height: 25
+  
+}
 
 //CRUD paths
 const optionGET = {
@@ -61,7 +66,7 @@ class Expiring extends Component {
                 }}
               >
                 DELETE
-                {/* <img className="Trash" src={"Trash"}/> */}
+                {/* <img style={style} className="Trash" src={"Trash"}/> */}
               </button>{" "}
               <button 
                 className="information" 
@@ -70,7 +75,7 @@ class Expiring extends Component {
                 }}
               >
                 INFORMATION
-                {/* <img className="Info" src={"Info"} /> */}
+                {/* <img style={style} className="Info" src={"Info"} /> */}
               </button>{" "}
             </div>
           </>
