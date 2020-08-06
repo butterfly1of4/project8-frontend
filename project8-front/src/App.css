@@ -4,6 +4,7 @@ nav {
   background-color: black;
   position: fixed;
   width: 100%;
+  z-index: 4;
 }
 
 .logo {
@@ -64,16 +65,37 @@ img {
   color: red;
 }
 
-.HPLinkButton {
-  background-color: red;
-  color: white;
-  border: 2px dashed red;
-  padding: 15px;
-  border-radius: 8px 40px;
-  font-size: 30px;
-  z-index: 1;
+
+.HPLinkButtonE {
   position: absolute;
-  top: 40%;
-  left: 30%;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0;
+  width: 200px;
+  height: 100px;
+  margin: 20px 0;
+  background: red;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  font-size: 30px;
+  top: 33%;
+  left: 28%;
+  z-index: 1;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0; 
+}
+
+.HPLinkButtonNR {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  margin: 20px 0;
+  background: red;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  font-size: 30px;
+  top: 33%;
+  right: 28%;
+  z-index: 4;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0; 
 }
