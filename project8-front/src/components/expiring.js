@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import App from "../App";
+// import App from "../App";
+import App from '../App.css'
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 import Button from "./StoryBook/Button/Button";
@@ -14,15 +15,7 @@ let style = {
   height: 30
 }
 
-let buttonStyle = {
-  // backgroundColor: black,
-  // color: white,
-  // display: flex,
-  // width: 200,
-  // alignItems: center,
-  // height: 40,
-  // justifyContent: space-between
-}
+
 //CRUD paths
 const optionGET = {
   method: "GET",
@@ -67,22 +60,23 @@ class Expiring extends Component {
             </div>
             <img src={item.image} />
             <div className="button-class">
+              
               <button
-                className="delete" style={buttonStyle} 
+                className="delete" 
                 onClick={(e) => {
                   this.remove(item.title);
                 }}
               >
-                DELETE
+                
                 <img style={style} className="Trash" src={Trash}/>
               </button>{" "}
               <button 
-                className="information" style={buttonStyle} 
+                className="information"  
                 onClick={(e) => {
                   this.showModal(item.synopsis);
                 }}
               >
-                INFORMATION
+             
                 <img style={style} className="Info" src={Info} />
               </button>{" "}
             </div>

@@ -59,7 +59,7 @@ class newReleases extends Component {
                   
                 }}
               >
-                INFORMATION< img style={style} className="Info" src={Info}/>
+                < img style={style} className="NRInfo" src={Info}/>
               </button>{" "}
             </div>
           </>
