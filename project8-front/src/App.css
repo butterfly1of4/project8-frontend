@@ -99,7 +99,6 @@ img {
   z-index: 4;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0; 
 }
-
 .box {
   position: absolute;
   top: 90%;
@@ -107,4 +106,39 @@ img {
   transform: translate(-50%, -50%);
   padding: 4rem;
   background-color: black;
-} 
+
+}
+
+.delete {
+  background-color: black;
+  width: 100px;
+  border: black solid;
+padding-bottom: 10px;
+}
+
+.Trash {
+  width: 50px;
+}
+
+.information {
+  background-color: black;
+  width: 100px;
+  border: black solid;
+  padding-bottom: 10px;
+}
+
+.Info {
+  width: 50px;
+}
+.NRInfo {
+padding-left: 85px;
+}
+
+.button-class {
+  display: flex;
+  width: 210px;
+  border: black solid 1px;
+  justify-content: space-between;
+  background-color: black;
+  height: 50px;
+}
