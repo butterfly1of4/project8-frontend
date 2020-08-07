@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import logo from "./images/logo.png";
 import backgroundimage from "./images/backgroundimage.jpg";
 import { Route, Link, Switch } from "react-router-dom";
@@ -41,47 +41,51 @@ const optionDELETE = {
     Accept: "application/json",
   },
 };
+function App() {
+  // class App extends Component {
+  //   constructor() {
+  //     super();
+  //     this.state = {};
+  //   }
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-  render() {
-    return (
+  // render() {
+  const [show, setShow] = useState(false);
+
+  const closeModalHandler = () => setShow(false);
+  return (
+    <div>
+      <Nav />
       <div>
-        <Nav />
-        <div>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/newReleases" exact component={newReleases} />
-            <Route path="/expiring" exact component={expiring} />
-            <Route
-              path="/newReleases/update/:title"
-              render={(routerProps) => <Update {...routerProps}></Update>}
-            />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/newReleases" exact component={newReleases} />
+          <Route path="/expiring" exact component={expiring} />
+          <Route
+            path="/newReleases/update/:title"
+            render={(routerProps) => <Update {...routerProps}></Update>}
+          />
+        </Switch>
       </div>
-    );
-  } //render
-  componentDidMount() {
-    //fetch request to the API
-    fetch(url, optionGET, optionDELETE)
-      //converting the API to readable code. Naming it convertedResponse
-      .then((res) => res.json())
-      .then((convertedResponse) => {
-        //console.log to see if it works
-        console.log(convertedResponse);
-        console.log(convertedResponse[0].title);
-        // setting State to fetch a new title name each time the page is loaded. It was empty when defined earlier.
-        this.setState({
-          name: convertedResponse[0].title,
-        });
-      });
-  }
+    </div>
+  );
+  // } //render
+  // componentDidMount() {
+  //   //fetch request to the API
+  //   fetch(url, optionGET, optionDELETE)
+  //     //converting the API to readable code. Naming it convertedResponse
+  //     .then((res) => res.json())
+  //     .then((convertedResponse) => {
+  //       //console.log to see if it works
+  //       console.log(convertedResponse);
+  //       console.log(convertedResponse[0].title);
+  //       // setting State to fetch a new title name each time the page is loaded. It was empty when defined earlier.
+  //       this.setState({
+  //         name: convertedResponse[0].title,
+  //       });
+  //     });
+  // }
 } //component
 
 export default App;

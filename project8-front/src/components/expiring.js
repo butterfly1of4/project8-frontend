@@ -74,8 +74,8 @@ class Expiring extends Component {
     }); //map
     return (
       <React.Fragment>
-        <Modal />
         <div className="list">{list}</div>
+        <Modal />
       </React.Fragment>
     );
   } //render
@@ -83,9 +83,9 @@ class Expiring extends Component {
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
-    document.querySelector(".title").innerHTML = e;
-    document.querySelector(".box").style.opacity = 1;
-    document.querySelector(".close").style.opacity = 1;
+    document.querySelector(".information").innerHTML = info;
+    // document.querySelector(".box").style.opacity = 1;
+    // document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
 

@@ -28,7 +28,7 @@ class Modal extends Component {
   render() {
     return (
       <div className="box">
-        <div className="information"></div>
+        <div className="Modal-information">text</div>
         <button
           className="close"
           onClick={(e) => {
