@@ -108,13 +108,14 @@ img {
   width: 50px;
 }
 .information {
-  background-color: transparent;
+  background-color: black;
   width: 400px;
-  border: black solid;
+  /* border: black solid; */
   padding-bottom: 10px;
   margin-left: 100px;
   margin-top: 100px;
   text-align: center;
+  color: white;
 }
 .Info {
   width: 50px;
