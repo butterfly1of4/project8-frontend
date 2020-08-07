@@ -9,7 +9,7 @@ nav {
 
 .logo {
   padding: 20px;
-  position: fixed;
+  position: sticky;
   height: 90px;
   width: 20%;
 }
