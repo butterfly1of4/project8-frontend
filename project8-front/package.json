@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "cors": "^2.8.5",
@@ -36,9 +35,6 @@
     ]
   },
   "devDependencies": {
-    "@storybook/react": "^5.3.19",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "jest": "^26.2.2"
+    "@storybook/react": "^5.3.19"
   }
 }
