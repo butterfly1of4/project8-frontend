@@ -1,0 +1,30 @@
+.button-search {
+  border-radius: 2px;
+  padding: 5px 25px;
+  background-color: #f9501d;
+  color: white;
+}
+
+.button-update {
+  border-radius: 2px;
+  padding: 5px 25px;
+  background-color: white;
+  color: #f9501d;
+}
+
+
+button {
+  background-color: black;
+  color: white;
+  /* display: flex;
+  width: 200px;
+  align-items: center;
+  height: 40px;
+  justify-content: space-between;
+} */
+}
+
+
+
+
+/*# sourceMappingURL=main.40696478.chunk.css.map*/
