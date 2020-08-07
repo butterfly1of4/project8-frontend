@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import logo from "./images/logo.png";
-import backgroundimage from "./images/backgroundimage.jpg";
+// import backgroundimage from "./images/backgroundimage.jpg";
 import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import newReleases from "./components/newReleases";
@@ -9,6 +9,7 @@ import Modal from "./components/Modal";
 import Update from "./components/update";
 
 // import Button from "./components/Button/Button";
+
 import Nav from "./components/Nav";
 import Home from "./Home";
 
@@ -56,17 +57,21 @@ function App() {
     <div>
       <Nav />
       <div>
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/newReleases" exact component={newReleases} />
-          <Route path="/expiring" exact component={expiring} />
-          <Route
-            path="/newReleases/update/:title"
-            render={(routerProps) => <Update {...routerProps}></Update>}
-          />
-        </Switch>
+        <Nav />
+        <div>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+
+            <Route path="/newReleases" exact component={newReleases} />
+            <Route path="/expiring" exact component={expiring} />
+            <Route
+              path="/newReleases/update/:title"
+              render={(routerProps) => <Update {...routerProps}></Update>}
+            />
+          </Switch>
+        </div>
       </div>
     </div>
   );

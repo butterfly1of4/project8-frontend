@@ -2,16 +2,13 @@ import React, { Component } from "react";
 import App from "../App";
 import { render } from "react-dom";
 import { Route, Link } from "react-router-dom";
-
 let url = "https://project8-backend.herokuapp.com/";
-
 const optionGET = {
   method: "GET",
   headers: {
     Accept: "application/json",
   },
 };
-
 class Modal extends Component {
   constructor() {
     super();
@@ -24,11 +21,10 @@ class Modal extends Component {
       unogsdate: String,
     }; //state
   } //constructor
-
   render() {
     return (
       <div className="box">
-        <div className="Modal-information">text</div>
+        <div className="information"></div>
         <button
           className="close"
           onClick={(e) => {
@@ -41,5 +37,4 @@ class Modal extends Component {
     ); //return
   } //render
 } //component
-
 export default Modal;

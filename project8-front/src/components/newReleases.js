@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
-
+import Info from "./StoryBook/Icons/info.png";
 // import Button from "./Button/Button";
-
 //import the API
+let style = {
+  width: 25,
+  height: 25,
+};
 let url = "https://project8-backend.herokuapp.com/release";
 //add CRUD paths if necessary
 const optionGET = {
@@ -14,7 +17,6 @@ const optionGET = {
     Accept: "application/json",
   },
 };
-
 class newReleases extends Component {
   constructor() {
     super();
@@ -22,7 +24,6 @@ class newReleases extends Component {
       data: [],
     }; //state
   } //constructor
-
   componentWillMount() {
     fetch(url, optionGET)
       //converting the API to readable code. Naming it convertedResponse
@@ -48,7 +49,7 @@ class newReleases extends Component {
                   this.showModal(item.synopsis);
                 }}
               >
-                INFORMATION
+                <img style={style} className="NRInfo" src={Info} />
               </button>{" "}
             </div>
           </>
@@ -57,20 +58,17 @@ class newReleases extends Component {
     }); //map
     return (
       <React.Fragment>
+        <Modal />
         <div className="list">{list}</div>
       </React.Fragment>
     );
   } //render
-
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
-    document.querySelector(".title").innerHTML = e;
-    // document.querySelector(".box").style.opacity = 1;
-    // document.querySelector(".close").style.opacity = 1;
+    document.querySelector(".information").innerHTML = e;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
-
   //   remove(title) {
   //     fetch(url + "/" + title, optionDELETE)
   //       .then(() => {
@@ -85,10 +83,8 @@ class newReleases extends Component {
   //         console.log(err);
   //       });
   //   } //remove
-
   //   update(item) {
   //     console.log("update works");
   //   }
 } //component
-
 export default newReleases;
