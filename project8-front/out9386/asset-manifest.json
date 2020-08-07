@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/project8-frontend/static/css/main.40696478.chunk.css",
+    "main.js": "/project8-frontend/main.068036195eff565128ad.bundle.js",
+    "main.css.map": "/project8-frontend/static/css/main.40696478.chunk.css.map",
+    "main.js.map": "/project8-frontend/main.068036195eff565128ad.bundle.js.map",
+    "runtime~main.js": "/project8-frontend/runtime~main.068036195eff565128ad.bundle.js",
+    "runtime~main.js.map": "/project8-frontend/runtime~main.068036195eff565128ad.bundle.js.map",
+    "vendors~main.js": "/project8-frontend/vendors~main.068036195eff565128ad.bundle.js",
+    "vendors~main.js.map": "/project8-frontend/vendors~main.068036195eff565128ad.bundle.js.map",
+    "iframe.html": "/project8-frontend/iframe.html",
+    "precache-manifest.8d7275667a1686d72b80bb8936a3e370.js": "/project8-frontend/precache-manifest.8d7275667a1686d72b80bb8936a3e370.js",
+    "service-worker.js": "/project8-frontend/service-worker.js",
+    "static/media/info.png": "/project8-frontend/static/media/info.2adde941.png",
+    "static/media/trash.png": "/project8-frontend/static/media/trash.fc1a3daf.png",
+    "vendors~main.068036195eff565128ad.bundle.js.LICENSE.txt": "/project8-frontend/vendors~main.068036195eff565128ad.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.068036195eff565128ad.bundle.js",
+    "vendors~main.068036195eff565128ad.bundle.js",
+    "static/css/main.40696478.chunk.css",
+    "main.068036195eff565128ad.bundle.js"
+  ]
+}
