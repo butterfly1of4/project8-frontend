@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/project8-frontend/static/css/main.40696478.chunk.css",
-    "main.js": "/project8-frontend/main.068036195eff565128ad.bundle.js",
-    "main.css.map": "/project8-frontend/static/css/main.40696478.chunk.css.map",
-    "main.js.map": "/project8-frontend/main.068036195eff565128ad.bundle.js.map",
-    "runtime~main.js": "/project8-frontend/runtime~main.068036195eff565128ad.bundle.js",
-    "runtime~main.js.map": "/project8-frontend/runtime~main.068036195eff565128ad.bundle.js.map",
-    "vendors~main.js": "/project8-frontend/vendors~main.068036195eff565128ad.bundle.js",
-    "vendors~main.js.map": "/project8-frontend/vendors~main.068036195eff565128ad.bundle.js.map",
-    "iframe.html": "/project8-frontend/iframe.html",
-    "precache-manifest.8d7275667a1686d72b80bb8936a3e370.js": "/project8-frontend/precache-manifest.8d7275667a1686d72b80bb8936a3e370.js",
+    "main.css": "/project8-frontend/static/css/main.74815251.chunk.css",
+    "main.js": "/project8-frontend/static/js/main.837153b7.chunk.js",
+    "main.js.map": "/project8-frontend/static/js/main.837153b7.chunk.js.map",
+    "runtime-main.js": "/project8-frontend/static/js/runtime-main.4f023dd8.js",
+    "runtime-main.js.map": "/project8-frontend/static/js/runtime-main.4f023dd8.js.map",
+    "static/js/2.dec483cd.chunk.js": "/project8-frontend/static/js/2.dec483cd.chunk.js",
+    "static/js/2.dec483cd.chunk.js.map": "/project8-frontend/static/js/2.dec483cd.chunk.js.map",
+    "index.html": "/project8-frontend/index.html",
+    "precache-manifest.01904e10007e1a035121bda593cf6405.js": "/project8-frontend/precache-manifest.01904e10007e1a035121bda593cf6405.js",
     "service-worker.js": "/project8-frontend/service-worker.js",
-    "static/media/info.png": "/project8-frontend/static/media/info.2adde941.png",
-    "static/media/trash.png": "/project8-frontend/static/media/trash.fc1a3daf.png",
-    "vendors~main.068036195eff565128ad.bundle.js.LICENSE.txt": "/project8-frontend/vendors~main.068036195eff565128ad.bundle.js.LICENSE.txt"
+    "static/css/main.74815251.chunk.css.map": "/project8-frontend/static/css/main.74815251.chunk.css.map",
+    "static/js/2.dec483cd.chunk.js.LICENSE.txt": "/project8-frontend/static/js/2.dec483cd.chunk.js.LICENSE.txt",
+    "static/media/backgroundimage.jpg": "/project8-frontend/static/media/backgroundimage.e83ade52.jpg"
   },
   "entrypoints": [
-    "runtime~main.068036195eff565128ad.bundle.js",
-    "vendors~main.068036195eff565128ad.bundle.js",
-    "static/css/main.40696478.chunk.css",
-    "main.068036195eff565128ad.bundle.js"
+    "static/js/runtime-main.4f023dd8.js",
+    "static/js/2.dec483cd.chunk.js",
+    "static/css/main.74815251.chunk.css",
+    "static/js/main.837153b7.chunk.js"
   ]
 }
