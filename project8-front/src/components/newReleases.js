@@ -53,6 +53,7 @@ class newReleases extends Component {
                 }}
               >
                 <img style={style} className="NRInfo" src={Info} />
+                <Link to={"/newReleases/update/" + item.title}>Update</Link>
               </button>{" "}
             </div>
           </>
