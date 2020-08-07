@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import App from "../App";
 import Modal from "./Modal";
-import { Link } from "react-router-dom";
+import { Link, Switch } from "react-router-dom";
 
 let url = "https://project8-backend.herokuapp.com/release/title/";
+
 
 const optionGET = {
   method: "GET",
@@ -19,13 +20,18 @@ class Create extends Component {
       data: [],
     }; //state
   } //constructor
-
+  storybook = () => {
+   
+  }
   render() {
     return (
+      <div>
       <form onSubmit={this.create}>
         <input type="text" placeholder="create title" />
         <input type="submit" />
       </form>
+      <Link to="https://butterfly1of4.github.io/project8-frontend/?path=/story/button--search">Storybook</Link>
+      </div>
     );
   } //render
 
@@ -53,4 +59,5 @@ class Create extends Component {
   }; //update
 } //component
 
+ 
 export default Create;
