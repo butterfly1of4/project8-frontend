@@ -37,7 +37,6 @@ class Expiring extends Component {
   } //constructor
   componentWillMount() {
     fetch(url, optionGET)
-      //converting the API to readable code. Naming it convertedResponse
       .then((res) => res.json())
       .then((data) => this.setState({ data }))
       .catch((err) => {
