@@ -5,28 +5,50 @@ import { Link } from "react-router-dom";
 
 let url = "https://project8-backend.herokuapp.com/release";
 
+const optionGET = {
+  method: "GET",
+  headers: {
+    Accept: "application/json",
+  },
+};
+
 class Update extends Component {
   constructor() {
     super();
     this.state = {
-      title: ""
+     data: []
     }; //state
   } //constructor
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.update}>
-          <input type="text" id="title" placeholder="update title"></input>
 
-          <input
-            type="submit"
-            id="submit"
-            placeholder="submit changes here"
-          ></input>
-        </form>
-      </div>
-    ); //return
-  } //render
+  componentWillMount() {
+    fetch(url, optionGET)
+      .then((res) => res.json())
+      .then((data) => this.setState({ data }))
+      .then(console.log(this.state.data))
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  render() {
+    let list = this.state.data.map((item) => {
+      if (item.title === this.props.match.params.title) {
+        return (
+          <React.Fragment>
+
+            <form onSubmit={this.update}>
+              <input type="text" placeholder="Update Title"></input>
+              <input type="submit"></input>
+            </form>
+            <img src={item.image}/>
+          </React.Fragment>
+        );
+      } else {
+        return null;
+      }
+    }); //list
+    return <div>{list}</div>;
+  }//render
 
   update = (e) => {
     e.preventDefault();
