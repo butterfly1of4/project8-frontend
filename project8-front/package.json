@@ -17,7 +17,7 @@
     "react-test-renderer": "^16.13.1"
   },
   "scripts": {
-    "deploy-storybook": "storybook-to-ghpages",
+  
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
