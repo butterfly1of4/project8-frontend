@@ -3,7 +3,7 @@ import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
-let url = "https://project8-backend.herokuapp.com/release/title/Connected";
+let url = "https://project8-backend.herokuapp.com/release/title/";
 
 const optionGET = {
   method: "GET",
