@@ -76,9 +76,9 @@ class Expiring extends Component {
                   this.showModal(item.synopsis);
                 }}
               >
-             
+             </button>
                 <img style={style} className="Info" src={Info} />
-              </button>{" "}
+              {" "}
             </div>
           </>
         </div>

@@ -45,6 +45,7 @@ img {
   height: 650px;
   width: 100%;
   margin-top: -30px;
+  padding: 0px;
 }
 
 .pageLinkButton {
@@ -70,14 +71,14 @@ img {
   position: absolute;
   width: 200px;
   height: 100px;
-  margin: 20px 0;
+  margin: 10px 0;
   background: red;
   border-radius: 50% / 10%;
   color: white;
   text-align: center;
   text-indent: .1em;
   font-size: 30px;
-  top: 33%;
+  top: 28%;
   left: 28%;
   z-index: 1;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0; 
@@ -94,7 +95,7 @@ img {
   text-align: center;
   text-indent: .1em;
   font-size: 30px;
-  top: 33%;
+  top: 27%;
   right: 28%;
   z-index: 4;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8), 10px 5px 15px 0; 
@@ -122,20 +123,23 @@ padding-bottom: 10px;
 
 .information {
   background-color: black;
-  width: 400px;
+  width: 600px;
   /* border: black solid; */
   padding-bottom: 10px;
-  margin-left: 100px;
+  margin-left: 350px;
   margin-top: 100px;
   text-align: center;
   color: white;
+  opacity: 0;
 }
 
 .Info {
-  width: 50px;
+ padding: 10px 15px 10px 0px;
 }
+
 .NRInfo {
-padding-left: 85px;
+padding: 2px 2px 2px 10px;
+border: solid black 1px;
 }
 
 .button-class {
@@ -146,3 +150,12 @@ padding-left: 85px;
   background-color: black;
   height: 50px;
 }
+
+.synopsis {
+  width: 300px;
+}
+
+.close {
+  opacity: 0;
+}
+
