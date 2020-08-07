@@ -57,7 +57,6 @@ function App() {
     <div>
       <Nav />
       <div>
-        <Nav />
         <div>
           <Switch>
             <Route path="/" exact>

@@ -85,9 +85,9 @@ class Expiring extends Component {
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
-    document.querySelector(".title").innerHTML = e;
-    document.querySelector(".box").style.opacity = 1;
-    document.querySelector(".close").style.opacity = 1;
+    document.querySelector(".information").innerHTML = e;
+    // document.querySelector(".box").style.opacity = 1;
+    // document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
   remove(title) {
