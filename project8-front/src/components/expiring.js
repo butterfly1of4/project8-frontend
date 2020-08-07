@@ -1,21 +1,18 @@
 import React, { Component } from "react";
 // import App from "../App";
-import App from '../App.css'
+import App from "../App.css";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 import Button from "./StoryBook/Button/Button";
 import Info from "./StoryBook/Icons/info.png";
 import Trash from "./StoryBook/Icons/trash.png";
-import Icon from './StoryBook/Icons/Icon.css'
+import Icon from "./StoryBook/Icons/Icon.css";
 //import the API
 let url = "https://project8-backend.herokuapp.com/expire";
-
 let style = {
   width: 30,
-  height: 30
-}
-
-
+  height: 30,
+};
 //CRUD paths
 const optionGET = {
   method: "GET",
@@ -23,14 +20,12 @@ const optionGET = {
     Accept: "application/json",
   },
 };
-
 const optionDELETE = {
   method: "DELETE",
   headers: {
     Accept: "application/json",
   },
 };
-
 class Expiring extends Component {
   constructor() {
     super();
@@ -40,7 +35,6 @@ class Expiring extends Component {
       clicked: true,
     }; //state
   } //constructor
-
   componentWillMount() {
     fetch(url, optionGET)
       //converting the API to readable code. Naming it convertedResponse
@@ -60,25 +54,21 @@ class Expiring extends Component {
             </div>
             <img src={item.image} />
             <div className="button-class">
-              
               <button
-                className="delete" 
+                className="delete"
                 onClick={(e) => {
                   this.remove(item.title);
                 }}
               >
-                
-                <img style={style} className="Trash" src={Trash}/>
+                <img style={style} className="Trash" src={Trash} />
               </button>{" "}
-              <button 
-                className="information"  
+              <button
+                className="information"
                 onClick={(e) => {
                   this.showModal(item.synopsis);
                 }}
-              >
-             </button>
-                <img style={style} className="Info" src={Info} />
-              {" "}
+              ></button>
+              <img style={style} className="Info" src={Info} />{" "}
             </div>
           </>
         </div>
@@ -91,16 +81,14 @@ class Expiring extends Component {
       </React.Fragment>
     );
   } //render
-
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
-    document.querySelector(".title").innerHTML = e;
-    document.querySelector(".box").style.opacity = 1;
-    document.querySelector(".close").style.opacity = 1;
+    document.querySelector(".information").innerHTML = e;
+    // document.querySelector(".box").style.opacity = 1;
+    // document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
-
   remove(title) {
     fetch(url + "/" + title, optionDELETE)
       .then(() => {
@@ -115,10 +103,8 @@ class Expiring extends Component {
         console.log(err);
       });
   } //remove
-
   update(item) {
     console.log("update works");
   }
 } //component
-
 export default Expiring;

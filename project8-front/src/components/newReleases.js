@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 import Info from "./StoryBook/Icons/info.png";
 
 // import Button from "./Button/Button";
-
 //import the API
-
 let style = {
   width: 25,
   height: 25,
@@ -21,7 +19,6 @@ const optionGET = {
     Accept: "application/json",
   },
 };
-
 class newReleases extends Component {
   constructor() {
     super();
@@ -29,7 +26,6 @@ class newReleases extends Component {
       data: [],
     }; //state
   } //constructor
-
   componentWillMount() {
     fetch(url, optionGET)
       //converting the API to readable code. Naming it convertedResponse
@@ -70,7 +66,6 @@ class newReleases extends Component {
       </React.Fragment>
     );
   } //render
-
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
@@ -81,5 +76,4 @@ class newReleases extends Component {
   }; //showModal
 
 } //component
-
 export default newReleases;

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import logo from "./images/logo.png";
 // import backgroundimage from "./images/backgroundimage.jpg";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch, Router } from "react-router-dom";
 import "./App.css";
 import newReleases from "./components/newReleases";
 import expiring from "./components/expiring";
@@ -43,16 +43,21 @@ const optionDELETE = {
     Accept: "application/json",
   },
 };
+function App() {
+  // class App extends Component {
+  //   constructor() {
+  //     super();
+  //     this.state = {};
+  //   }
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-  render() {
-    return (
+  // render() {
+  const [show, setShow] = useState(false);
+
+  const closeModalHandler = () => setShow(false);
+  return (
+    <div>
+      <Nav />
       <div>
-        <Nav />
         <div>
           <Switch>
             <Route path="/" exact>
@@ -68,6 +73,9 @@ class App extends Component {
           </Switch>
         </div>
       </div>
+    
+ 
+
     );
   } //render
   componentDidMount() {
