@@ -30,7 +30,7 @@ class Create extends Component {
         <input type="text" placeholder="create title" />
         <input type="submit" />
       </form>
-      <Link to="https://butterfly1of4.github.io/project8-frontend/?path=/story/button--search">Storybook</Link>
+      {/* <Link to="https://butterfly1of4.github.io/project8-frontend/?path=/story/button--search">Storybook</Link> */}
       </div>
     );
   } //render

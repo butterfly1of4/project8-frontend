@@ -43,13 +43,11 @@
   },
   "devDependencies": {
     "@storybook/react": "^5.3.19",
-
+    "@storybook/storybook-deployer": "^2.8.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest-enzyme": "^7.1.2",
-
-    "@storybook/storybook-deployer": "^2.8.6"
+    "storybook-react-router": "^1.0.8"
   },
   "homepage": "https://myusername.github.io/project8-frontend"
-
 }

@@ -40,6 +40,7 @@ class Update extends Component {
               <input type="text" placeholder="Update Title"></input>
               <input type="submit"></input>
             </form>
+        <p>{item.title}</p>
             <img src={item.image}/>
           </React.Fragment>
         );
