@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import logo from "./images/logo.png";
 // import backgroundimage from "./images/backgroundimage.jpg";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Link, Switch, Router } from "react-router-dom";
 import "./App.css";
 import newReleases from "./components/newReleases";
 import expiring from "./components/expiring";
