@@ -67,9 +67,8 @@ class Expiring extends Component {
                 onClick={(e) => {
                   this.showModal(item.synopsis);
                 }}
-              >
-                <img style={style} className="Info" src={Info} />
-              </button>{" "}
+              ></button>
+              <img style={style} className="Info" src={Info} />{" "}
             </div>
           </>
         </div>

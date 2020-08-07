@@ -14,8 +14,13 @@ class Nav extends Component {
         <Link to="/expiring">
           <button className="pageLinkButton">Expiring</button>
         </Link>
+
         <Link to="/newReleases">
           <button className="pageLinkButton">New Releases</button>
+        </Link>
+
+        <Link to="/create">
+          <button className="pageLinkButton">Add New Movie</button>
         </Link>
       </nav>
     );

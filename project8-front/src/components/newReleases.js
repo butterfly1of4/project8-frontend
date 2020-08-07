@@ -67,6 +67,8 @@ class newReleases extends Component {
     console.dir(e);
     let info = this.state.data.synopsis;
     document.querySelector(".information").innerHTML = e;
+    document.querySelector(".information").style.opacity = 1;
+    document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
   //   remove(title) {
