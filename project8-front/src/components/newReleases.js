@@ -53,7 +53,7 @@ class newReleases extends Component {
             <img src={item.image} />
             <div className="button-class">
               <button
-                className="information"
+                className="synopsis"
                 onClick={(e) => {
                   this.showModal(item.synopsis);
                   
