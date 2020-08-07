@@ -3,7 +3,7 @@ import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
-let url = "https://project8-backend.herokuapp.com/release";
+let url = "https://project8-backend.herokuapp.com/release/";
 
 const optionGET = {
   method: "GET",
@@ -54,7 +54,7 @@ class Update extends Component {
     e.preventDefault();
     console.dir(e.target[0].value);
     console.log(this.props.match.params.title);
-    console.log(url + "/title/" + this.props.match.params.title);
+    console.log(url + this.props.match.params.title);
     const formData = {
       title: document.querySelector("input").value,
     };
@@ -68,7 +68,7 @@ class Update extends Component {
       },
       body: JSON.stringify(formData),
     };
-    fetch(url + "/title/edit/" + this.props.match.params.title, optionPUT)
+    fetch(url + this.props.match.params.title, optionPUT)
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => {
