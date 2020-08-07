@@ -3,11 +3,7 @@ import logo from "../images/logo.png";
 // import backgroundimage from "./images/backgroundimage.jpg";
 import { Route, Link, Switch } from "react-router-dom";
 import "../../src/App.css";
-// import newReleases from "./components/newReleases";
-// import expiring from "./components/expiring";
-// import Modal from "./components/Modal";
-// import Update from "./components/update";
-// import Button from "./components/Button/Button";
+// import newReleases from "./com
 
 class Nav extends Component {
     render() {
@@ -23,6 +19,10 @@ class Nav extends Component {
          
           <Link to="/newReleases">
             <button className="pageLinkButton">New Releases</button>
+          </Link>
+
+          <Link to="/create">
+            <button className="pageLinkButton">Add New Movie</button>
           </Link>
        
         </nav>

@@ -6,7 +6,6 @@ import Info from "./StoryBook/Icons/info.png"
 
 // import Button from "./Button/Button";
 
-
 //import the API
 
 let style = {
@@ -54,13 +53,13 @@ class newReleases extends Component {
             <img src={item.image} />
             <div className="button-class">
               <button
-                className="information"
+                className="synopsis"
                 onClick={(e) => {
                   this.showModal(item.synopsis);
                   
                 }}
               >
-                < img style={style} className="NRInfo" src={Info}/>
+                <img style={style} className="NRInfo" src={Info}/>
               </button>{" "}
             </div>
           </>
@@ -78,8 +77,8 @@ class newReleases extends Component {
   showModal = (e) => {
     console.dir(e);
     let info = this.state.data.synopsis;
-    document.querySelector(".title").innerHTML = e;
-    document.querySelector(".box").style.opacity = 1;
+    document.querySelector(".information").innerHTML = e;
+    document.querySelector(".information").style.opacity = 1;
     document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal

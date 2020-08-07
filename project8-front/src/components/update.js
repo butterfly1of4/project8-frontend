@@ -3,36 +3,58 @@ import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
-let url = "https://project8-backend.herokuapp.com/release";
+let url = "https://project8-backend.herokuapp.com/release/";
+
+const optionGET = {
+  method: "GET",
+  headers: {
+    Accept: "application/json",
+  },
+};
 
 class Update extends Component {
   constructor() {
     super();
     this.state = {
-      title: ""
+     data: []
     }; //state
   } //constructor
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.update}>
-          <input type="text" id="title" placeholder="update title"></input>
 
-          <input
-            type="submit"
-            id="submit"
-            placeholder="submit changes here"
-          ></input>
-        </form>
-      </div>
-    ); //return
-  } //render
+  componentWillMount() {
+    fetch(url, optionGET)
+      .then((res) => res.json())
+      .then((data) => this.setState({ data }))
+      .then(console.log(this.state.data))
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  render() {
+    let list = this.state.data.map((item) => {
+      if (item.title === this.props.match.params.title) {
+        return (
+          <React.Fragment>
+
+            <form onSubmit={this.update}>
+              <input type="text" placeholder="Update Title"></input>
+              <input type="submit"></input>
+            </form>
+            <img src={item.image}/>
+          </React.Fragment>
+        );
+      } else {
+        return null;
+      }
+    }); //list
+    return <div>{list}</div>;
+  }//render
 
   update = (e) => {
     e.preventDefault();
     console.dir(e.target[0].value);
     console.log(this.props.match.params.title);
-    console.log(url + "/title/" + this.props.match.params.title);
+    console.log(url + this.props.match.params.title);
     const formData = {
       title: document.querySelector("input").value,
     };
@@ -46,7 +68,7 @@ class Update extends Component {
       },
       body: JSON.stringify(formData),
     };
-    fetch(url + "/title/edit/" + this.props.match.params.title, optionPUT)
+    fetch(url + this.props.match.params.title, optionPUT)
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => {

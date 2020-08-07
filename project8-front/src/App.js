@@ -7,6 +7,7 @@ import newReleases from "./components/newReleases";
 import expiring from "./components/expiring";
 import Modal from "./components/Modal";
 import Update from "./components/update";
+import Create from "./components/create";
 
 
 // import Button from "./components/Button/Button";
@@ -57,7 +58,7 @@ class App extends Component {
           <Switch>
 
             <Route path="/" exact><Home /></Route>
-
+          <Route path="/create" exact component={Create} />
             <Route path="/newReleases" exact component={newReleases} />
             <Route path="/expiring" exact component={expiring} />
             <Route
