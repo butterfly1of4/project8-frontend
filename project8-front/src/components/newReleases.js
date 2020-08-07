@@ -3,12 +3,14 @@ import App from "../App";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 import Info from "./StoryBook/Icons/info.png";
+
 // import Button from "./Button/Button";
 //import the API
 let style = {
   width: 25,
   height: 25,
 };
+
 let url = "https://project8-backend.herokuapp.com/release";
 //add CRUD paths if necessary
 const optionGET = {
@@ -33,6 +35,7 @@ class newReleases extends Component {
         console.log(err);
       });
   } //componentWillMount
+
   render() {
     let list = this.state.data.map((item) => {
       return (
@@ -71,22 +74,6 @@ class newReleases extends Component {
     document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
-  //   remove(title) {
-  //     fetch(url + "/" + title, optionDELETE)
-  //       .then(() => {
-  //         console.log("removed");
-  //         this.setState({
-  //           data: this.state.data.filter((item) => {
-  //             return item.title !== title;
-  //           }),
-  //         });
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   } //remove
-  //   update(item) {
-  //     console.log("update works");
-  //   }
+
 } //component
 export default newReleases;

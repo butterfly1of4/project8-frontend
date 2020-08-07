@@ -73,24 +73,23 @@ function App() {
           </Switch>
         </div>
       </div>
-    </div>
-  );
-  // } //render
-  // componentDidMount() {
-  //   //fetch request to the API
-  //   fetch(url, optionGET, optionDELETE)
-  //     //converting the API to readable code. Naming it convertedResponse
-  //     .then((res) => res.json())
-  //     .then((convertedResponse) => {
-  //       //console.log to see if it works
-  //       console.log(convertedResponse);
-  //       console.log(convertedResponse[0].title);
-  //       // setting State to fetch a new title name each time the page is loaded. It was empty when defined earlier.
-  //       this.setState({
-  //         name: convertedResponse[0].title,
-  //       });
-  //     });
-  // }
+    
+ 
+
+    );
+  } //render
+  componentDidMount() {
+    fetch(url, optionGET, optionDELETE)
+      .then((res) => res.json())
+      .then((convertedResponse) => {
+        console.log(convertedResponse);
+        console.log(convertedResponse[0].title);
+
+        this.setState({
+          name: convertedResponse[0].title,
+        });
+      });
+  }
 } //component
 
 export default App;
