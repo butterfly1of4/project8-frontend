@@ -59,7 +59,7 @@ class newReleases extends Component {
                   
                 }}
               >
-                < img style={style} className="NRInfo" src={Info}/>
+                <img style={style} className="NRInfo" src={Info}/>
               </button>{" "}
             </div>
           </>
@@ -78,6 +78,8 @@ class newReleases extends Component {
     console.dir(e);
     let info = this.state.data.synopsis;
     document.querySelector(".information").innerHTML = e;
+    document.querySelector(".information").style.opacity = 1;
+    document.querySelector(".close").style.opacity = 1;
     this.setState({ clicked: !this.state.clicked });
   }; //showModal
 

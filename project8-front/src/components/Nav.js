@@ -20,6 +20,10 @@ class Nav extends Component {
           <Link to="/newReleases">
             <button className="pageLinkButton">New Releases</button>
           </Link>
+
+          <Link to="/create">
+            <button className="pageLinkButton">Add New Movie</button>
+          </Link>
        
         </nav>
         )
