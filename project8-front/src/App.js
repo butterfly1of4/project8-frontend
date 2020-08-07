@@ -9,7 +9,6 @@ import Modal from "./components/Modal";
 import Update from "./components/update";
 import Create from "./components/create";
 
-
 // import Button from "./components/Button/Button";
 
 import Nav from "./components/Nav";
@@ -56,9 +55,10 @@ class App extends Component {
         <Nav />
         <div>
           <Switch>
-
-            <Route path="/" exact><Home /></Route>
-          <Route path="/create" exact component={Create} />
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/create" exact component={Create} />
             <Route path="/newReleases" exact component={newReleases} />
             <Route path="/expiring" exact component={expiring} />
             <Route
@@ -67,20 +67,16 @@ class App extends Component {
             />
           </Switch>
         </div>
-
       </div>
     );
   } //render
   componentDidMount() {
-    //fetch request to the API
     fetch(url, optionGET, optionDELETE)
-      //converting the API to readable code. Naming it convertedResponse
       .then((res) => res.json())
       .then((convertedResponse) => {
-        //console.log to see if it works
         console.log(convertedResponse);
         console.log(convertedResponse[0].title);
-        // setting State to fetch a new title name each time the page is loaded. It was empty when defined earlier.
+
         this.setState({
           name: convertedResponse[0].title,
         });
